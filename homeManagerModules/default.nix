@@ -1,5 +1,7 @@
 {
   imports = [
+    ./bundles/shellPrograms.nix
+
     ./shells/zsh
 
     ./programs/git.nix
