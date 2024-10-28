@@ -30,6 +30,7 @@ let
     {
       binds = importFile ./config/binds.nix;
       autostart = importFile ./config/autostart.nix;
+      decoration = importFile ./config/decoration.nix;
     };
 in
 with lib;
@@ -51,6 +52,7 @@ with lib;
           variables
           binds
           autostart
+          decoration
         ];
     };
   };
