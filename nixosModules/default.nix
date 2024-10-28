@@ -14,6 +14,8 @@
 
     ./graphics/amdgpu.nix
 
+    ./desktop/hyprland.nix
+
     ./default/user.nix
     ./default/locale.nix
   ];

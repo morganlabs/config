@@ -1,15 +1,14 @@
 { ... }:
 {
   homeManagerModules = {
+    shells.zsh.enable = true;
+    desktop.hyprland.enable = true;
+
     bundles = {
       shellPrograms.enable = true;
     };
 
-    shells.zsh.enable = true;
-
-    programs =
-      {
-      };
+    programs = { };
   };
 
   home.stateVersion = "24.05";

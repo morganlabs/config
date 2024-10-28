@@ -9,5 +9,7 @@
     ./programs/eza.nix
     ./programs/unzip.nix
     ./programs/pfetch.nix
+
+    ./desktop/hyprland
   ];
 }

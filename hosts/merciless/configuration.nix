@@ -7,6 +7,7 @@
     security.doas.enable = true;
     connectivity.ssh.enable = true;
     graphics.amdgpu.enable = true;
+    desktop.hyprland.enable = true;
 
     bundles = {
       default.enable = true;
