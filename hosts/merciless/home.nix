@@ -5,6 +5,7 @@
 
     programs = {
       bat.enable = true;
+      eza.enable = true;
     };
   };
 
