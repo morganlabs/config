@@ -32,6 +32,7 @@ let
       autostart = importFile ./config/autostart.nix;
       decoration = importFile ./config/decoration.nix;
       env = importFile ./config/env.nix;
+      input = importFile ./config/input.nix;
     };
 in
 with lib;
@@ -55,6 +56,7 @@ with lib;
           autostart
           decoration
           env
+          input
         ];
     };
   };
