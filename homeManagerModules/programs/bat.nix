@@ -15,12 +15,10 @@ with lib;
   };
 
   config = mkIf cfg.enable {
+    stylix.targets.bat.enable = true;
     programs.bat = {
       enable = true;
-      config = {
-        theme = "Nord";
-        style = "full";
-      };
+      config.style = "full";
     };
   };
 }
