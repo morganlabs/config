@@ -3,6 +3,8 @@
   imports = [ ./luks.nix ];
 
   nixosModules = {
+    bootloader.grub.enable = true;
+
     bundles = {
       default.enable = true;
     };
