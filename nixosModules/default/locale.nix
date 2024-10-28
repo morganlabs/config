@@ -18,19 +18,23 @@ with lib;
     services.xserver.xkb.layout = mkDefault "gb";
     time.timeZone = mkDefault "Europe/London";
     console.keyMap = mkDefault "uk";
-    i18n = {
-      defaultLocale = mkDefault "en_GB.UTF-8";
-      extraLocaleSettings = {
-        LC_ADDRESS = mkDefault "en_GB.UTF-8";
-        LC_IDENTIFICATION = mkDefault "en_GB.UTF-8";
-        LC_MEASUREMENT = mkDefault "en_GB.UTF-8";
-        LC_MONETARY = mkDefault "en_GB.UTF-8";
-        LC_NAME = mkDefault "en_GB.UTF-8";
-        LC_NUMERIC = mkDefault "en_GB.UTF-8";
-        LC_PAPER = mkDefault "en_GB.UTF-8";
-        LC_TELEPHONE = mkDefault "en_GB.UTF-8";
-        LC_TIME = mkDefault "en_GB.UTF-8";
+    i18n =
+      let
+        localeStr = "en_GB.UTF-8";
+      in
+      {
+        defaultLocale = mkDefault localeStr;
+        extraLocaleSettings = {
+          LC_ADDRESS = mkDefault localeStr;
+          LC_IDENTIFICATION = mkDefault localeStr;
+          LC_MEASUREMENT = mkDefault localeStr;
+          LC_MONETARY = mkDefault localeStr;
+          LC_NAME = mkDefault localeStr;
+          LC_NUMERIC = mkDefault localeStr;
+          LC_PAPER = mkDefault localeStr;
+          LC_TELEPHONE = mkDefault localeStr;
+          LC_TIME = mkDefault localeStr;
+        };
       };
-    };
   };
 }
