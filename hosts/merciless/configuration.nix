@@ -8,6 +8,7 @@
     connectivity.ssh.enable = true;
     graphics.amdgpu.enable = true;
     desktop.hyprland.enable = true;
+    decoration.stylix.enable = true;
 
     bundles = {
       default.enable = true;

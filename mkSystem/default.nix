@@ -39,12 +39,13 @@ let
         inherit inputs vars lib;
       };
 
-      modules = [
+      modules = with inputs; [
         ../nixosModules
         (../hosts + "/${hostname}/configuration.nix")
         (../hosts + "/${hostname}/hardware-configuration.nix")
         (baseConfig)
         (homeManager)
+        stylix.nixosModules.stylix
       ];
     };
 in

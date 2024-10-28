@@ -7,6 +7,8 @@
 
     ./security/doas.nix
 
+    ./decoration/stylix
+
     ./connectivity/networkmanager
     ./connectivity/bluetooth.nix
     ./connectivity/firewall.nix

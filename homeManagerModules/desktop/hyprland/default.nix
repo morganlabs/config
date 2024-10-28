@@ -20,6 +20,8 @@ with lib;
   };
 
   config = mkIf cfg.enable {
+    stylix.targets.hyprland.enable = true;
+
     wayland.windowManager.hyprland = {
       enable = true;
 
@@ -30,12 +32,6 @@ with lib;
 
     home = {
       sessionVariables.NIXOS_OZONE_WL = "1";
-      pointerCursor = {
-        gtk.enable = true;
-        package = pkgs.bibata-cursors;
-        name = "Bibata-Modern-Classic";
-        size = 16;
-      };
     };
   };
 }
