@@ -21,6 +21,8 @@ with lib;
       eza.enable = true;
       unzip.enable = true;
       pfetch.enable = true;
+      btop.enable = true;
+      fzf.enable = true;
     };
   };
 }

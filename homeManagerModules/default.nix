@@ -9,6 +9,8 @@
     ./programs/eza.nix
     ./programs/unzip.nix
     ./programs/pfetch.nix
+    ./programs/btop.nix
+    ./programs/fzf.nix
 
     ./desktop/hyprland
   ];
