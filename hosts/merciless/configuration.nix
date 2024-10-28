@@ -4,6 +4,7 @@
 
   nixosModules = {
     bootloader.grub.enable = true;
+    security.doas.enable = true;
 
     bundles = {
       default.enable = true;
