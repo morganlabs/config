@@ -6,6 +6,8 @@
     programs = {
       bat.enable = true;
       eza.enable = true;
+      unzip.enable = true;
+      pfetch.enable = true;
     };
   };
 
