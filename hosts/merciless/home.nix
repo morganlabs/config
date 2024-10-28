@@ -4,6 +4,7 @@
     shells.zsh.enable = true;
 
     programs = {
+      git.enable = true;
       bat.enable = true;
       eza.enable = true;
       unzip.enable = true;

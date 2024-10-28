@@ -2,6 +2,7 @@
   imports = [
     ./shells/zsh
 
+    ./programs/git.nix
     ./programs/bat.nix
     ./programs/eza.nix
     ./programs/unzip.nix
