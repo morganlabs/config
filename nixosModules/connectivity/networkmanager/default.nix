@@ -20,33 +20,13 @@ with lib;
     };
   };
 
-  config =
-    mkIf cfg.enable {
+  config = mkIf cfg.enable (
+    {
       networking.networkmanager = {
         enable = mkForce true;
         wifi.backend = mkForce (mkIfElse cfg.wifi.useIwd "iwd" "wpa_supplicant");
       };
     }
-    // mkIf cfg.dns.controld.enable {
-      networking = {
-        networkmanager.dns = "none";
-        nameservers = [
-          "76.76.2.2#ControlD"
-          "76.76.10.2#ControlD"
-          "2606:1a40::2#ControlD"
-          "2606:1a40:1::2#ControlD"
-        ];
-      };
-
-      services.resolved = {
-        enable = true;
-        dnssec = "true";
-        domains = [ "~." ];
-        extraConfig = ''
-          DNSOverTLS=opportunistic
-          MulticastDNS=resolve
-        '';
-        llmnr = "true";
-      };
-    };
+    // (mkIf cfg.dns.controld.enable (import ./controld.nix))
+  );
 }

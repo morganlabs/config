@@ -5,16 +5,11 @@
   nixosModules = {
     bootloader.grub.enable = true;
     security.doas.enable = true;
-
-    connectivity = {
-      networkmanager.enable = true;
-      bluetooth.enable = true;
-      firewall.enable = true;
-      ssh.enable = true;
-    };
+    connectivity.ssh.enable = true;
 
     bundles = {
       default.enable = true;
+      networking.enable = true;
     };
   };
 
