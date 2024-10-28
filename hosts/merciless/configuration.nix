@@ -6,6 +6,7 @@
     bootloader.grub.enable = true;
     security.doas.enable = true;
     connectivity.ssh.enable = true;
+    graphics.amdgpu.enable = true;
 
     bundles = {
       default.enable = true;

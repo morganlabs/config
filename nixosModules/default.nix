@@ -12,6 +12,8 @@
     ./connectivity/firewall.nix
     ./connectivity/ssh.nix
 
+    ./graphics/amdgpu.nix
+
     ./default/user.nix
     ./default/locale.nix
   ];
