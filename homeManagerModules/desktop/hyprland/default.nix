@@ -33,6 +33,7 @@ let
       decoration = importFile ./config/decoration.nix;
       env = importFile ./config/env.nix;
       input = importFile ./config/input.nix;
+      windowrules = importFile ./config/windowrules.nix;
     };
 in
 with lib;
@@ -57,6 +58,7 @@ with lib;
           decoration
           env
           input
+          windowrules
         ];
     };
   };
