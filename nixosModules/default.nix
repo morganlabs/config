@@ -9,6 +9,7 @@
     ./connectivity/networkmanager.nix
     ./connectivity/bluetooth.nix
     ./connectivity/firewall.nix
+    ./connectivity/ssh.nix
 
     ./default/user.nix
     ./default/locale.nix

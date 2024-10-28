@@ -10,6 +10,7 @@
       networkmanager.enable = true;
       bluetooth.enable = true;
       firewall.enable = true;
+      ssh.enable = true;
     };
 
     bundles = {
