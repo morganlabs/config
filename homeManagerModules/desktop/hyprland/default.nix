@@ -7,6 +7,11 @@
 }:
 let
   cfg = config.homeManagerModules.desktop.hyprland;
+
+  variables = {
+    "$mod" = "SUPER";
+    "$alt" = "ALT";
+  };
 in
 with lib;
 {
@@ -17,6 +22,10 @@ with lib;
   config = mkIf cfg.enable {
     wayland.windowManager.hyprland = {
       enable = true;
+
+      settings = mkMerge [
+        variables
+      ];
     };
 
     home = {
