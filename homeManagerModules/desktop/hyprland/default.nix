@@ -3,6 +3,7 @@
   pkgs,
   lib,
   vars,
+  osConfig,
   ...
 }:
 let
@@ -13,9 +14,23 @@ let
     "$alt" = "ALT";
   };
 
-  defaultConfig = {
-    binds = import ./config/binds.nix { inherit config lib; };
-  };
+  defaultConfig =
+    let
+      importFile =
+        path:
+        import path {
+          inherit
+            config
+            lib
+            osConfig
+            pkgs
+            ;
+        };
+    in
+    {
+      binds = importFile ./config/binds.nix;
+      autostart = importFile ./config/autostart.nix;
+    };
 in
 with lib;
 {
@@ -35,6 +50,7 @@ with lib;
         mkMerge [
           variables
           binds
+          autostart
         ];
     };
   };
