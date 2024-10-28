@@ -9,6 +9,7 @@
     connectivity = {
       networkmanager.enable = true;
       bluetooth.enable = true;
+      firewall.enable = true;
     };
 
     bundles = {
