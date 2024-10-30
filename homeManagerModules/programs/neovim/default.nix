@@ -36,11 +36,11 @@ with lib;
         harpoon = import ./plugins/harpoon.nix;
         conform-nvim = import ./plugins/conform.nix;
         lint = import ./plugins/lint.nix;
+        lualine = import ./plugins/lualine.nix;
 
         hardtime.enable = true;
         nvim-autopairs.enable = true;
 
-        lualine.enable = true;
         luasnip.enable = true;
         telescope.enable = true;
         web-devicons.enable = true;
