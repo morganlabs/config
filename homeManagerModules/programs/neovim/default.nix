@@ -33,10 +33,10 @@ with lib;
       keymaps = import ./config/keymaps.nix;
 
       plugins = {
+        harpoon = import ./plugins/harpoon.nix;
         hardtime.enable = true;
         nvim-autopairs.enable = true;
         conform-nvim.enable = true;
-        harpoon.enable = true;
         lint.enable = true;
         lualine.enable = true;
         luasnip.enable = true;
