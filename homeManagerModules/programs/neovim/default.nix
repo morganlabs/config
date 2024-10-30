@@ -34,9 +34,9 @@ with lib;
 
       plugins = {
         harpoon = import ./plugins/harpoon.nix;
+        conform-nvim = import ./plugins/conform.nix;
         hardtime.enable = true;
         nvim-autopairs.enable = true;
-        conform-nvim.enable = true;
         lint.enable = true;
         lualine.enable = true;
         luasnip.enable = true;
