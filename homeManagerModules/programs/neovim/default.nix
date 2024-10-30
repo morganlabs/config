@@ -37,11 +37,11 @@ with lib;
         conform-nvim = import ./plugins/conform.nix;
         lint = import ./plugins/lint.nix;
         lualine = import ./plugins/lualine.nix;
+        luasnip = import ./plugins/luasnip.nix;
 
         hardtime.enable = true;
         nvim-autopairs.enable = true;
 
-        luasnip.enable = true;
         telescope.enable = true;
         web-devicons.enable = true;
         nvim-colorizer.enable = true;
