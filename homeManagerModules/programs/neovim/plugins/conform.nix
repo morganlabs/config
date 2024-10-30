@@ -36,7 +36,7 @@
 
     luaConfig.post = ''
       vim.keymap.set({"n", "v"}, "<leader>fmt", function()
-        conform.format({
+        require("conform").format({
           async = false,
           lsp_fallback = true,
           timeout_ms = 500
