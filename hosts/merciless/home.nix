@@ -8,7 +8,9 @@
       shellPrograms.enable = true;
     };
 
-    programs = { };
+    programs = {
+      neovim.enable = true;
+    };
   };
 
   home.stateVersion = "24.05";

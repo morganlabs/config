@@ -35,7 +35,7 @@ with lib;
     {
       mkdir = "mkdir -p";
     }
-    (mkIf config.programs.neovim.enable {
+    (mkIf config.programs.nixvim.enable {
       vi = "nvim";
       vim = "nvim";
     })

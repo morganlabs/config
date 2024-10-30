@@ -11,6 +11,7 @@
     ./programs/pfetch.nix
     ./programs/btop.nix
     ./programs/fzf.nix
+    ./programs/neovim
 
     ./desktop/hyprland
   ];

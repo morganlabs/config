@@ -17,9 +17,12 @@ with lib;
       inherit inputs vars;
     };
 
-    users.${vars.user.username} = mkMerge [
-      inputs.self.outputs.homeManagerModules.default
-      (../hosts + "/${hostname}/home.nix")
-    ];
+    users.${vars.user.username} =
+      with inputs;
+      mkMerge [
+        self.outputs.homeManagerModules.default
+        nixvim.homeManagerModules.nixvim
+        (../hosts + "/${hostname}/home.nix")
+      ];
   };
 }
