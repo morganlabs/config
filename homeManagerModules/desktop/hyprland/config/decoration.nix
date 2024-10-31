@@ -14,10 +14,16 @@
 
   decoration = {
     rounding = 0;
-    blur.enabled = false;
     drop_shadow = true;
     shadow_range = 0;
     shadow_offset = "4 4";
+
+    blur = {
+        enabled = true;
+        size =8;
+        passes=2;
+        noise=0.025;
+    };
   };
 
   misc = {
