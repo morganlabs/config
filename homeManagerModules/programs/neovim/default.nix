@@ -39,12 +39,11 @@ with lib;
         lualine = import ./plugins/lualine.nix;
         luasnip = import ./plugins/luasnip.nix;
         telescope = import ./plugins/telescope.nix;
+        nvim-colorizer = import ./plugins/colorizer.nix;
 
         hardtime.enable = true;
         nvim-autopairs.enable = true;
-
         web-devicons.enable = true;
-        nvim-colorizer.enable = true;
       };
     };
   };
