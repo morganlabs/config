@@ -71,4 +71,9 @@ in
     "$mod Shift, 9, movetoworkspace, 9"
     "$mod Shift, 0, movetoworkspace, 10"
   ];
+
+  bindm = [
+    "$mod, mouse:272, movewindow"
+    "$mod, mouse:273, movewindow"
+  ];
 }
