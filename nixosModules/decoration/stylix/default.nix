@@ -25,9 +25,10 @@ with lib;
       opacity.terminal = 0.8;
 
       targets = {
-        console.enable = true;
-        gtk.enable = true;
         nixos-icons.enable = true;
+        console.enable = true;
+        gnome.enable = true;
+        gtk.enable = true;
       };
 
       cursor = {
