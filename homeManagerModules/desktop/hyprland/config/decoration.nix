@@ -1,6 +1,6 @@
 { ... }:
 {
-  animations.enabled = true;
+  animations.enabled = false;
 
   general = {
     gaps_in = 5;
