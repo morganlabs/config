@@ -38,11 +38,11 @@ with lib;
         lint = import ./plugins/lint.nix;
         lualine = import ./plugins/lualine.nix;
         luasnip = import ./plugins/luasnip.nix;
+        telescope = import ./plugins/telescope.nix;
 
         hardtime.enable = true;
         nvim-autopairs.enable = true;
 
-        telescope.enable = true;
         web-devicons.enable = true;
         nvim-colorizer.enable = true;
       };
