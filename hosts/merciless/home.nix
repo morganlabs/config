@@ -10,6 +10,7 @@
 
     programs = {
       neovim.enable = true;
+      waybar.enable = true;
     };
   };
 

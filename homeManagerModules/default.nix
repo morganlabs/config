@@ -12,6 +12,7 @@
     ./programs/btop.nix
     ./programs/fzf.nix
     ./programs/neovim
+    ./programs/waybar
 
     ./desktop/hyprland
   ];

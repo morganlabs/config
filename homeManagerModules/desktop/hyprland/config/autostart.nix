@@ -13,7 +13,7 @@ in
 {
   exec-once = with pkgs; [
     "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
-    # (mkIfStr hmModules.desktop.waybar.enable "${waybar}/bin/waybar")
+    (mkIfStr hmModules.programs.waybar.enable "${waybar}/bin/waybar")
     (mkIfStr osPrograms._1password-gui.enable "${_1password-gui}/bin/1password --silent")
     (mkIfStr osPrograms.noisetorch.enable "noisetorch -i")
 
