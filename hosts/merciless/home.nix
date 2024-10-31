@@ -13,6 +13,7 @@
       waybar.enable = true;
       rofi.enable = true;
       kitty.enable = true;
+      firefox.enable = true;
     };
   };
 

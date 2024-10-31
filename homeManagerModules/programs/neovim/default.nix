@@ -15,6 +15,7 @@ with lib;
   };
 
   config = mkIf cfg.enable {
+    home.packages = with pkgs; [ wl-clipboard ];
     stylix.targets.nixvim = {
       enable = true;
       transparentBackground = {

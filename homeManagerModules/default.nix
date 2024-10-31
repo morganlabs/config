@@ -15,6 +15,7 @@
     ./programs/waybar
     ./programs/rofi
     ./programs/kitty
+    ./programs/firefox
 
     ./desktop/hyprland
   ];
