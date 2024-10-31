@@ -1,4 +1,4 @@
-{ config, lib, ... }:
+{ pkgs, config, lib, ... }:
 with lib;
 let
   hmModules = config.homeManagerModules;
@@ -7,8 +7,8 @@ in
   bind = [
     # Run programs
     # (mkIfStr hmModules.hyprlock.enable "$alt SHIFT, Q, exec, ${pkgs.hyprlock}/bin/hyprlock --immediate")
-    # (mkIfStr hmModules.kitty.enable "$mod, Return, exec, ${pkgs.kitty}/bin/kitty")
-    # (mkIfStr hmModules.rofi.enable "$mod, D, exec, ${pkgs.rofi-wayland}/bin/rofi -show drun")
+    (mkIfStr hmModules.programs.kitty.enable "$mod, Return, exec, ${pkgs.kitty}/bin/kitty")
+    (mkIfStr hmModules.programs.rofi.enable "$mod, D, exec, ${pkgs.rofi-wayland}/bin/rofi -show drun")
 
     # Special Workspaces
     # (mkIfStr hmModules.vesktop.enable "$mod, grave, togglespecialworkspace, vesktop")

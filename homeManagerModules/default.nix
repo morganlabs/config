@@ -13,6 +13,8 @@
     ./programs/fzf.nix
     ./programs/neovim
     ./programs/waybar
+    ./programs/rofi
+    ./programs/kitty
 
     ./desktop/hyprland
   ];
