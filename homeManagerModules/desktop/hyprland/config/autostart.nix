@@ -17,8 +17,8 @@ in
     (mkIfStr osPrograms._1password-gui.enable "${_1password-gui}/bin/1password --silent")
     (mkIfStr osPrograms.noisetorch.enable "noisetorch -i")
 
-    # (mkIfStr hmModules.programs.kitty.enable "[workspace 1 silent] ${kitty}/bin/kitty")
-    # (mkIfStr hmModules.programs.firefox.enable "[workspace 2 silent] ${firefox}/bin/firefox")
+    (mkIfStr hmModules.programs.kitty.enable "[workspace 1 silent] ${kitty}/bin/kitty")
+    (mkIfStr hmModules.programs.firefox.enable "[workspace 2 silent] ${firefox}/bin/firefox")
     # (mkIfStr hmModules.programs.obsidian.enable "[workspace 3 silent] ${obsidian}/bin/obsidian")
     # (mkIfStr hmModules.programs.slack.enable "[workspace special:slack silent] ${slack}/bin/slack")
     # (mkIfStr hmModules.programs.betterbird.enable "[workspace special:mail silent] ${betterbird}/bin/betterbird")
