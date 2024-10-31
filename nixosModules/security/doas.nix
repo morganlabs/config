@@ -26,7 +26,7 @@ with lib;
     security.sudo.enable = mkDefault false;
     security.doas = {
       enable = mkForce true;
-      extraRules = mkDefault cfg.rules;
+      extraRules = mkForce cfg.rules;
     };
   };
 }
