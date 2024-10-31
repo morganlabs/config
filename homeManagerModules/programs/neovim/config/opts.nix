@@ -1,4 +1,5 @@
-{
+lib: 
+with lib; {
   # Disable line wrapping
   wrap = false;
 
@@ -19,7 +20,7 @@
 
   # Undo
   undofile = true;
-  undodir = ''os.getenv("HOME") .. "/.vim/undodir"'';
+  undodir = nixvim.mkRaw ''os.getenv("HOME") .. "/.vim/undodir"'';
 
   hlsearch = true;
   incsearch = true;

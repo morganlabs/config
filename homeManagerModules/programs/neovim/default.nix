@@ -28,7 +28,7 @@ with lib;
       extraPackages = with pkgs; [ ripgrep ];
       viAlias = true;
       vimAlias = true;
-      opts = import ./config/opts.nix;
+      opts = import ./config/opts.nix config.lib;
       globals = import ./config/globals.nix;
       keymaps = import ./config/keymaps.nix;
 
