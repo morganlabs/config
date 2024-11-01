@@ -14,10 +14,13 @@ in
   options.nixosModules.default.user = {
     enable = mkEnableOption "Enable default.user";
     shell = mkStrOption "Which shell to use" "zsh";
-    username = mkStrOption "The username" vars.user.username;
-    fullName = mkStrOption "The full name" vars.user.name;
     extra.groups = mkListOfOption types.str "Extra groups (NOTE: always includes wheel)" [ ];
     features.autologin.enable = mkBoolOption "Autologin? (First TTY only)" false;
+
+    user = {
+        username = mkStrOption "The username" vars.user.username;
+        fullName = mkStrOption "The full name" vars.user.name;
+    };
   };
 
   config = mkIf cfg.enable {
@@ -34,9 +37,9 @@ in
       }
     );
 
-    users.users.${cfg.username} = {
+    users.users.${cfg.user.username} = {
       shell = mkForce pkgs.${cfg.shell};
-      description = mkDefault cfg.fullName;
+      description = mkDefault cfg.user.fullName;
       isNormalUser = mkForce true;
       initialPassword = mkDefault "nixos";
       extraGroups = mkForce ([ "wheel" ] ++ cfg.extra.groups);

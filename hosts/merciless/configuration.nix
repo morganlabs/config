@@ -8,6 +8,8 @@
     connectivity.ssh.enable = true;
     graphics.amdgpu.enable = true;
     desktop.hyprland.enable = true;
+    default.user.features.autologin.enable = true;
+
     decoration = {
         plymouth.enable = true;
         stylix.enable = true;
