@@ -7,6 +7,7 @@
 
     ./security/doas.nix
 
+    ./decoration/plymouth.nix
     ./decoration/stylix
 
     ./connectivity/networkmanager
