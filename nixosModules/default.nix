@@ -19,6 +19,8 @@
 
     ./desktop/hyprland.nix
 
+    ./programs/1password.nix
+
     ./default/user.nix
     ./default/locale.nix
   ];

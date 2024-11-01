@@ -9,6 +9,7 @@
     graphics.amdgpu.enable = true;
     desktop.hyprland.enable = true;
     default.user.features.autologin.enable = true;
+    programs._1password.enable = true;
 
     decoration = {
         plymouth.enable = true;
