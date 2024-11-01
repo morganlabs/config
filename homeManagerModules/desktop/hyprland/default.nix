@@ -40,11 +40,18 @@ with lib;
 {
   options.homeManagerModules.desktop.hyprland = {
     enable = mkEnableOption "Enable desktop.hyprland";
+    features.startOnLogin.enable = mkBoolOption "Auto-start Hyprland from TTY1" true;
   };
 
   config = mkIf cfg.enable {
     stylix.targets.hyprland.enable = true;
     home.sessionVariables.NIXOS_OZONE_WL = "1";
+
+    programs.zsh.initExtra = mkIf cfg.features.startOnLogin.enable ''
+      if [ -z "''${WAYLAND_DISPLAY}" ] && [ "''${XDG_VTNR}" -eq 1 ]; then
+        dbus-run-session Hyprland
+      fi
+    '';
 
     wayland.windowManager.hyprland = {
       enable = true;
