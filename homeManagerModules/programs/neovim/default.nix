@@ -15,7 +15,10 @@ with lib;
   };
 
   config = mkIf cfg.enable {
-    home.packages = with pkgs; [ wl-clipboard ];
+    home = {
+      packages = with pkgs; [ wl-clipboard ];
+      sessionVariables.EDITOR = "nvim";
+    };
     stylix.targets.nixvim = {
       enable = true;
       transparentBackground = {
