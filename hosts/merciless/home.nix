@@ -14,6 +14,10 @@
       rofi.enable = true;
       kitty.enable = true;
       firefox.enable = true;
+      obsidian.enable = true;
+      slack.enable = true;
+      betterbird.enable = true;
+      vesktop.enable = true;
     };
   };
 
